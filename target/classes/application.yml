@@ -1,0 +1,9 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  servlet:
+    context-path: "/home"
