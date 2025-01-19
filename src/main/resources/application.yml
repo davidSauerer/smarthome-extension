@@ -7,3 +7,4 @@ management:
 server:
   servlet:
     context-path: "/home"
+

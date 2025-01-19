@@ -35,20 +35,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Springfox Swagger 2 for API documentation -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>3.0.0</version> <!-- Use the latest stable version of Swagger 2 -->
-        </dependency>
-
-        <!-- Springfox Swagger UI for the graphical interface of your API docs -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>3.0.0</version> <!-- Ensure version consistency with Swagger 2 -->
-        </dependency>
-
         <!-- Spring Boot Actuator for monitoring and management -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -59,6 +45,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.2</version>
         </dependency>
 
     </dependencies>

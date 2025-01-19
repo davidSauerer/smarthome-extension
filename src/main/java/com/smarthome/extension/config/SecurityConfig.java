@@ -14,11 +14,13 @@ public class SecurityConfig  {
     @Bean
     public SecurityFilterChain web(HttpSecurity http) throws Exception {
         http
+                .cors(cors -> cors.disable())
                 .authorizeHttpRequests((authorize) -> authorize
                         .anyRequest().permitAll()
                 );
 
         return http.build();
     }
+
 }
 
