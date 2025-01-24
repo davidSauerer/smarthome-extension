@@ -6,10 +6,3 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-
-
-  # Additional options for PRs
-  ignore:
-  commit-message:
-    prefix: "chore(deps)"
-  rebase-strategy: "auto"
