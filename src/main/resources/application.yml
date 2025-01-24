@@ -8,3 +8,9 @@ server:
   servlet:
     context-path: "/home"
 
+logging:
+  level:
+    root: INFO
+    com.smarthome: INFO
+
+

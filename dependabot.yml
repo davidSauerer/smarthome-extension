@@ -1,7 +1,6 @@
 version: 2
 updates:
 
-  # Example for Maven (Java dependencies)
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
