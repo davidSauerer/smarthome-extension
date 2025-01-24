@@ -1,0 +1,15 @@
+version: 2
+updates:
+
+  # Example for Maven (Java dependencies)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+
+  # Additional options for PRs
+  ignore:
+  commit-message:
+    prefix: "chore(deps)"
+  rebase-strategy: "auto"
