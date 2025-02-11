@@ -63,4 +63,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: davidSauerer/she:latest
+          tags: she
+          labels: latest
