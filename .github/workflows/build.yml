@@ -38,7 +38,6 @@ jobs:
           path: target/*.jar
 
   build-and-push-docker-image:
-    name: Deploy
     needs: [ build-and-push-jar ]
     runs-on: ubuntu-latest
 
