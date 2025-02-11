@@ -22,16 +22,17 @@ jobs:
       - name: Build and verify with Maven
         run: mvn --batch-mode --update-snapshots verify
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Package
+          path: staging
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           push: false
           tags: davidSauerer/she:latest
-#          secrets: |
-#            GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
-
-      # - name: Upload artifact (commented out)
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: Package
-      #     path: staging
+      # secrets section is commented out
+      # secrets: |
+      #   GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
