@@ -9,7 +9,7 @@ env:
   REGISTRY: ghcr.io
 
 jobs:
-  build:
+  build-and-push-jar:
     runs-on: ubuntu-latest
 
     permissions:
@@ -37,9 +37,9 @@ jobs:
           name: she-application
           path: target/*.jar
 
-  deploy:
+  build-and-push-docker-image:
     name: Deploy
-    needs: [ build ]
+    needs: [ build-and-push-jar ]
     runs-on: ubuntu-latest
 
     steps:
