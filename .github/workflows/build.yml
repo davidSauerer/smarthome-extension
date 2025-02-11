@@ -23,13 +23,13 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 
       - name: prepare upload
-        run: mkdir staging && cp target/*.jar staging
+        run: mkdir target && cp target/*.jar target
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Package
-          path: staging
+          path: target/
 
   deploy:
     name: Deploy
