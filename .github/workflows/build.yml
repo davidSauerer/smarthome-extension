@@ -63,4 +63,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/davidSauerer/smarthome-extension:latest
+          tags: ghcr.io/davidsauerer/smarthome-extension:latest
