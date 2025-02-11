@@ -45,8 +45,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: false
           tags: davidSauerer/she:latest
+
       # secrets section is commented out
       # secrets: |
       #   GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
