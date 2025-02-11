@@ -20,20 +20,17 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and verify with Maven
-        run: mvn --batch-mode --update-snapshots verify
-
-      - name: prepare upload
-        run: mkdir target && cp target/*.jar target
+        run: mvn clean package --file pom.xml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Package
-          path: target/
+          path: target/*.jar
 
   deploy:
     name: Deploy
-    needs: [build]
+    needs: [ build ]
     runs-on: ubuntu-latest
 
     steps:
